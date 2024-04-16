@@ -1,4 +1,4 @@
-package br.com.genesisacademy.trilha;
+package br.com.genesisacademy.model.empresa;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -16,23 +16,22 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "TRILHA_ESTUDO")
-public class Trilha {
-  
+@Table(name = "EMPRESA")
+public class Empresa {
+ 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "te_id")
+  @Column(name = "em_id")
   private Long id;
 
-  @Column(name = "te_nome")
+  @Column(name = "em_cnpj")
+  private String cnpj;
+
+  @Column(name = "em_nome")
   private String nome;
 
-  @Column(name = "te_tempo_total")
-  private Long tempoTotal;
-
-  @Column(name = "te_descricao")
+  @Column(name = "em_descricao")
   private String descricao;
 
-  
 
 }

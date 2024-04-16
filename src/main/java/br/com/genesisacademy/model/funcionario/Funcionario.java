@@ -1,4 +1,4 @@
-package br.com.genesisacademy.funcionario;
+package br.com.genesisacademy.model.funcionario;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -26,7 +26,4 @@ public class Funcionario {
 
   @Column(name = "fn_departamento")
   private String departamento;
-
-
-
 }

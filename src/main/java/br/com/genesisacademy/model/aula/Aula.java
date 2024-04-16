@@ -1,6 +1,6 @@
-package br.com.genesisacademy.aula;
+package br.com.genesisacademy.model.aula;
 
-import br.com.genesisacademy.curso.Curso;
+import br.com.genesisacademy.model.curso.Curso;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -41,7 +41,7 @@ public class Aula {
   private Long tempoTotal;
 
   @ManyToOne(fetch = FetchType.LAZY)
-  @JoinColumn(name = "idCurso")
+  @JoinColumn(name = "cr_id")
   private Curso curso;
   
 }

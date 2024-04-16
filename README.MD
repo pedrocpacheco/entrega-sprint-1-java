@@ -43,6 +43,59 @@ A criação de uma plataforma digital de treinamento de novos colaboradores. Uma
 - **Cliente Pagante**: O Cliente pagante seria a empresa/corporação que sofre com o processo contratual, e com todo o problema descrito nas questões anteriores, e deseja um sistema de treinamento mais robusto e potencializado por IA’s Generativas para acompanhamento pessoal e uma Análise Profunda do desempenho dos clientes.
 - **Cliente Consumidor**: O Cliente Consumidor seria esse funcionário final, que é recém chegado em uma empresa, não conhece os seus processos, e precisa de um treinamento pessoal. E que, por muitas vezes, deixa de ter esse treinamento pessoal com outros clientes, pois estes estão sempre vivendo com altas demandas.
 
+## Documentação da API
+### Endpoint: Criar Aula
+- Método: POST
+- Rota: /aula
+- Descrição: Cria uma nova aula.
+- Corpo da Requisição:
+  ```json
+  {
+    "nome": "Você aprende java hoje!",
+    "descricao": "Aprendendo Java",
+    "conteudo": "Baixe o JDK e instale o VS Code",
+    "tempo_total": 10
+  }
+``
+
+### Endpoint: Recuperar Aula
+- Método: GET
+- Rota: /aula
+- Descrição: Recupera todas as aulas.
+- Corpo da Requisição:
+  ```json
+  [
+    {
+      "id": 1,
+      "nome": "Você aprende java hoje!",
+      "descricao": "Aprendendo Java",
+      "conteudo": "Baixe o JDK e instale o VS Code",
+      "tempo_total": 10
+    },
+    {
+      "id": 1,
+      "nome": "Programar é divertido!",
+      "descricao": "Você vai começar a gostar de programar",
+      "conteudo": "Vamos aprender no Scratch!",
+      "tempo_total": 20
+    }
+  ]
+
+### Endpoint: Criar Aula
+- Método: GET
+- Rota: /aula/{id}
+- Descrição: Recupera uma única aula.
+- Corpo da Requisição:
+  ```json
+  {   
+      "id": 1
+      "nome": "Programar é divertido!",
+      "descricao": "Você vai começar a gostar de programar",
+      "conteudo": "Vamos aprender no Scratch!",
+      "tempo_total": 20
+    }
+``
+
 ### Integrantes do grupo 
 > Gabriel Amancio: responsável pelas entregas de .NET e Devops.
 >
